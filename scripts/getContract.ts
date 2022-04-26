@@ -15,10 +15,10 @@ const sdk = new ThirdwebSDK(
 );
 
 // Set variable for the edition drop module contract address which can be found after creating a edition drop module in the dashboard
-const editionDropAddress = '<CONTRACT_ADDRESS>';
+const editionDropAddress = '0xA4158FBC767C3974fAe6d183EB5FcD9193d1ec40';
 
 // Initialize the edition drop module with the contract address
-const editionDrop = sdk.getNFTCollection(editionDropAddress)
+const editionDrop = sdk.getEditionDrop(editionDropAddress)
 
 editionDrop.getAll()
 

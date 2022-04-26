@@ -4,7 +4,7 @@ import { useEditionDrop, useMetamask, useAddress } from '@thirdweb-dev/react';
 const ClaimButton = () => {
   const connectWithMetamask = useMetamask();
   const editionDrop = useEditionDrop(
-    '<CONTRACT_ADDRESS>'
+    '0xA4158FBC767C3974fAe6d183EB5FcD9193d1ec40'
   );
   const address = useAddress();
   // State to track when a user is claiming an NFT
@@ -20,7 +20,7 @@ const ClaimButton = () => {
     } catch (error) {
       console.log('Failed to claim. Error: ', error);
       setClaiming(false);
-    } 
+    }
   };
 
   return (
@@ -34,7 +34,7 @@ const ClaimButton = () => {
             backgroundColor: '#05A266',
             color: 'white',
           }}
-          
+
           className='btn'
           onClick={onClick}
         >

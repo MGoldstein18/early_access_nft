@@ -4,15 +4,15 @@ import ClaimButton from './ClaimButton';
 
 const Nft = () => {
   const editionDrop = useEditionDrop(
-    '<CONTRACT_ADDRESS>'
+    '0xA4158FBC767C3974fAe6d183EB5FcD9193d1ec40'
   );
   const [nft, setNft] = useState('');
 
   async function fetchNft() {
     try {
-      const nft = await editionDrop?.get('0');
-      if (nft?.metadata.image) {
-        setNft(nft?.metadata.image);
+      const getNft = await editionDrop?.get('0');
+      if (getNft?.metadata.image) {
+        setNft(getNft?.metadata.image);
       }
     } catch (error) {
       console.log('Failed to get NFT. Error: ', error);
